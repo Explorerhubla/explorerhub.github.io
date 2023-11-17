@@ -43,58 +43,55 @@ body {
     max-height: 100%;
   }
 
-  .menu-toggle {
-    display: none;
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+  }
+  
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
-    padding: 15px;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
   }
   
   .bar {
     width: 25px;
     height: 3px;
-    background-color: pink;
-    margin: 5px 0;
-    transition: 0.4s;
-  }
-  
-  .menu {
-    display: flex;
-    flex-direction: column;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    padding-top: 60px;
+    margin: 6px 0;
     transition: 0.4s;
   }
   
-  .menu ul {
+  .menu-options {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .menu li {
-    padding: 15px;
-  }
-  
-  .menu a {
-    text-decoration: none;
-    color: pink;
-    font-size: 18px;
-  }
-  
-  .submenu ul {
     display: none;
   }
   
-  .submenu:hover ul {
-    display: block;
+  .menu-options li {
+    margin: 10px;
   }
+  
+  .menu-options a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .menu-container:hover .menu-options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust this value based on your design */
+    background-color: #333;
+  }
+  
