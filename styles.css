@@ -43,30 +43,20 @@ body {
     max-height: 100%;
   }
 
-  body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .menu-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-  }
-  
   .hamburger-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 50px;
   }
   
   .bar {
     width: 25px;
     height: 3px;
     background-color: #fff;
-    margin: 6px 0;
+    margin: 4px 0;
     transition: 0.4s;
   }
   
@@ -87,11 +77,12 @@ body {
     font-size: 18px;
   }
   
-  .menu-container:hover .menu-options {
+  .hamburger-menu:hover .menu-options {
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 60px; /* Adjust this value based on your design */
     background-color: #333;
+    left: 0.01em;
   }
   
