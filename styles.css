@@ -6,7 +6,7 @@ body {
   }
   
   header {
-    background-color: #242526;
+    background-color: #202020;
     color: white;
     padding: 10px;
     text-align: center;
@@ -42,7 +42,7 @@ body {
   .hero-image{
     background-image: url(hero-image.png);
     height:100vh;
-    background-position:top;
+    background-position:center;
     background-repeat: no-repeat;
     
   }
@@ -55,7 +55,7 @@ body {
     cursor: pointer;
     position: absolute;
     top: 25px;
-    right: 50px;
+    right: 40px;
   }
   
   .bar {
@@ -83,35 +83,43 @@ body {
     font-size: 18px;
   }
   
-  .hamburger-menu:hover .menu-options {
+  .hamburger-menu:focus .menu-options {
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 60px; /* Adjust this value based on your design */
     background-color: #333;
-    left: 0.01em;
+    left: 0.00em;
   }
+
+  .hamburger-menu:focus {
+    outline: none;
+}
   
   /* ABOUT US SECTION */
 
   .about-us{
     width: 1000px;
-    height: 200px;
-    background-color: #323233;
+    height: auto;
+    background-color: #202020;
     align-self: center;
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
-
+    border-color: #202020;
+   
   }
 
   #au-title{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
+    color: #fff;
+    margin:2px;
   }
 
   #au-text{
     text-align: center;
+    color: #fff;
   }
   
