@@ -11,9 +11,10 @@ body {
     color: white;
     padding: 10px;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
   }
   
-  nav {
+  /*nav {
     display: flex;
     justify-content: space-around;
     background-color: #444;
@@ -23,7 +24,7 @@ body {
   nav a {
     color: white;
     text-decoration: none;
-  }
+  }*/
   
   .container {
     display: grid;
@@ -43,60 +44,12 @@ body {
   .hero-image{
     background-image: url(hero-image.png);
     height:100vh;
-    background-position:center;
+    margin-top: 80px;
+    background-position:top;;
     background-repeat: no-repeat;
     
   }
 
-
-  
-  .hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute;
-    top: 25px;
-    right: 40px;
-    margin-right: 16em;
-  }
-  
-  .bar {
-    width: 40px;
-    height: 6px;
-    background-color: #fff;
-    margin: 4px 0;
-    transition: 0.4s;
-  }
-  
-  .menu-options {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-  }
-  
-  .menu-options li {
-    margin: 10px;
-  }
-  
-  .menu-options a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-  }
-  
-  .hamburger-menu:focus .menu-options {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* Adjust this value based on your design */
-    background-color: #333;
-    left: 0.00em;
-  }
-
-  .hamburger-menu:focus {
-    outline: none;
-}
 
   /* ABOUT US SECTION */
 
@@ -109,6 +62,8 @@ body {
     margin-right: auto;
     border-radius: 30px;
     border-color: #202020;
+    padding: 30px;
+    margin-top: -150px;
    
   }
 
@@ -127,55 +82,114 @@ body {
 
 /* MEMEBER SECTION */
 
-  .icon-container {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Adjust the space between the icon and the text */
-    margin-bottom: 20px; /* Space between the icon/link sets */
-  }
-  
-  .icon {
-    border: 2px solid black;
-    border-radius: 50%; /* This creates the circular border */
-    width: 100px; /* Adjust as necessary */
-    height: 100px; /* Adjust as necessary */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .icon img {
-    max-width: 100%; /* Scales the image to fit within the border */
-    max-height: 100%; /* Scales the image to fit within the border */
-  }
-  
-  .name-link p {
-    margin: 0;
-    color: white; /* Text color for 'Name' */
-  }
-  
-  .name-link a {
-    color: green; /* Text color for 'Link' */
-    text-decoration: none; /* Removes underline from links */
-  }
-  
-  .name-link a:hover {
-    text-decoration: underline; /* Adds underline on hover for links */
-  }
-  
+#members {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  color: #fff;
+  margin:2px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
 
-  /*  SCREEN SIZE */
+.member-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Adjust the space between the icon and the text */
+  margin-bottom: 20px; /* Space between the icon/link sets */
+}
 
 
-@media only screen and (max-width: 767px) {
+
+.icon-container{
+  display: flex;
+  align-items: center;
+  flex-direction:column;
+  margin-bottom: 20px;
+}
+
+.name-link {
+  display: flex;
+  flex-direction: column;
+  /* Stack the text vertically */
+  color: white; /* Text color for 'Name' */
+  margin-bottom: 50px;
+}
+
+.name-link p {
+  margin: 0;
+}
+
+.name-link a {
+  color: green; /* Text color for 'Link' */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.name-link a:hover {
+  text-decoration: underline; /* Adds underline on hover for links */
+}
+
+.icon {
+  border-radius: 50%; /* This creates the circular border */
+  width: 130px; /* Adjust as necessary */
+  height: 130px; /* Adjust as necessary */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon img {
+  max-width: 100%; /* Scales the image to fit within the border */
+  max-height: 100%;
+   /* Scales the image to fit within the border */
+}
+
+
+
+
+
+
+  
+  
+ /*  SCREEN SIZE */
+
+ 
+  
+
+ @media only screen and (max-width: 767px) {
   .hamburger-menu {
       margin:auto
+  }
+
+  .hero-image{
+    background-image: url(hero-image.png);
+    height:100vh;
+    margin-top: 60px;
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: 550px;
+
   }
 
   .menu-options ul {
       list-style: none;
       padding: 0;
       margin: 0;
+  }
+
+  #about-us{
+    width: 450px;
+    height: auto;
+    background-color: #202020;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    border-color: #202020;
+    padding: 30px;
+    margin-top: -150px;
+   
   }
 
 }
@@ -183,54 +197,15 @@ body {
 /* Styles for phones */
 
 @media only screen and (max-width: 480px) {
-  .hamburger-menu {
-      display: block;
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 1000;
-  }
+    .hamburger-menu {
+        margin:auto
+    }
+  
+    .menu-options ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-  .bar {
-      width: 25px;
-      height: 3px;
-      background-color: #333;
-      margin: 5px 0;
-      transition: 0.4s;
-  }
 
-  #menu-toggle {
-      display: none;
-  }
-
-  .menu-options {
-      display: none;
-      background-color: #333;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      padding-top: 50px;
-  }
-
-  .menu-options ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-  }
-
-  .menu-options li {
-      padding: 15px;
-  }
-
-  .menu-options a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 18px;
-  }
 }
-
-/* General styles for devices */
-
