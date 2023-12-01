@@ -8,43 +8,61 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Explorer Hub</h1>
-  </header>
 
- <!-- <div class="hamburger-menu" tabindex="0">
+<!--NAVBAR-->
+  <div class="navbar" id="navbar">
+
+    <div id="header"><h1>Explorer Hub</h1></div>
+    <div class="menu-icon" onclick="toggleMenu()">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
-    
-    <ul class="menu-options">
-      <div>
-        <link><a href="#about-us">About us</a></link>
-      </div>
-      <div>
-        <button><a href="#members">Members</a></button>
-      </div>
+    </div>
+    <ul class="menu-list">
+      <li><a href="#navbar" onclick="scrollToSection('home')"> Home</a></li>
+      <li><a href="#about-us" onclick="scrollToSection('about-us')">About us</a></li>
+      <li><a href="#members" onclick="scrollToSection('members')">Members</a></li>
     </ul>
-  </div> -->
+  </div>
+
+<!--HERO IMG-->
 
       <div class="hero-image"></div>
+
+
+<!--ABOUT US-->
 
   <div id="about-us">
     <h2 id="au-title">About us</h2>
     <div id="au-text">
-     <p>Step into Explorer Hub <br> A vibrant haven for coding enthusiasts ages 14 to 17  <br> Dedicated to nurturing a profound coding passion and fostering a collaborative community, we warmly welcome the new generation, from beginners to intermediates.<br>
-At Explorer Hub, we recognize a movement in how we virtually come together to learn. In aspiring to build virtual hubs within our community and for our community, we're creating a space where curiosity converges with the world of code.<br> Our founding class will collaboratively construct a community ignited by the passion of the next generation of coding enthusiasts.
-Joining us isn't merely entering a hub; it's becoming part of a pioneering group of trailblazers. Embrace this invitation with a builder's mindset, poised to shape the future of coding education.
- <br>
- Together, we'll learn, grow, and conquer challenges, fostering an environment where innovation and creativity flourish.<br>
- 
-Welcome to Explorer Hub – where the coding journey begins!
-
-      Explorer Hub
+     <p>Step into Explorer Hub. A vibrant haven for coding enthusiasts ages 14 to 17.<br> 
+        Dedicated to nurturing a profound coding passion and fostering a collaborative community,<br>
+        we warmly welcome the new generation, from beginners to intermediates.<br>
+        At Explorer Hub, we recognize a movement in how we virtually come together to learn.<br> 
+        <br>
+        <br>
+        In aspiring to build virtual hubs within our community and for our community, we're creating<br>
+        a space where curiosity converges with the world of code. Our founding class will collaboratively <br>
+        construct a community ignited by the passion of the next generation of coding enthusiasts.<br>
+        <br>
+        <br>
+        Joining us isn't merely entering a hub; it's becoming part of a pioneering group of trailblazers.<br>
+        Embrace this invitation with a builder's mindset, poised to shape the future of coding education.<br>
+        Together, we'll learn, grow, and conquer challenges, fostering an environment where innovation and creativity flourish.<br>
+        <br>
+        <br>
+        Welcome to Explorer Hub – where the coding journey begins!<br>
+       <br>
+       <br>
+        Explorer Hub
     </div>
   </div>
 
+
+<!--MEMBERs-->
+
   <h1  id="members"> Our Members</h1>
+  
 
   <div class="member-container">
       <div class="icon">
@@ -57,9 +75,6 @@ Welcome to Explorer Hub – where the coding journey begins!
       </div>
   
 
-
-  
-  
       <div class="icon">
         <img src="green.PNG" alt="Icon">
       </div>
@@ -71,6 +86,53 @@ Welcome to Explorer Hub – where the coding journey begins!
     
   </div> 
 
+<!--JAVA-->
+  <script>
+
+    function toggleMenu() {
+     var menuList = document.querySelector('.menu-list');
+     menuList.classList.toggle('show');
+    }
+
+
+    function closeMenu() {
+     var menuList = document.querySelector('.menu-list');
+     menuList.classList.remove('show');
+    }
+  
+    // Event listener for clicking on menu items to close the menu
+    document.querySelectorAll('.menu-list a').forEach(function (item) {
+     item.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', function (event) {
+     var menuList = document.querySelector('.menu-list');
+     var menuIcon = document.querySelector('.menu-icon');
+  
+     // Check if the click is outside the menu and menu icon
+     if (!menuList.contains(event.target) && !menuIcon.contains(event.target)) {
+      closeMenu();
+     }
+    });
+
+    // Function to scroll to a section smoothly
+function scrollToSection(sectionId) {
+  var section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+// Event listener for clicking on menu items to scroll to the corresponding section
+document.querySelectorAll('.menu-list a').forEach(function (item) {
+  item.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the default behavior of the anchor tag
+    var sectionId = this.getAttribute('href').substring(1);
+    scrollToSection(sectionId);
+    closeMenu();
+  });
+});
+  </script>
   
 
 </body>

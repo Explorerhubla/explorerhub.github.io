@@ -11,16 +11,6 @@ body {
     position: relative;
   }
 
-
-  
-  header {
-    background-color: #202020;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
   .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -28,6 +18,7 @@ body {
     gap: 10px;
     padding: 10px;
   }
+
   
   .main-content {
     grid-column: span 3;
@@ -35,6 +26,83 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+  /*navbar*/
+  
+  .navbar {
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #202020;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  #header{
+    text-align: center;
+    position: absolute;
+    right: 44%;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    /* Adjust the positioning as needed */
+    position: absolute;
+    right: 300px;
+  }
+  
+  .bar {
+    width: 40px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 3px;
+  }
+  
+  .menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top:300px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -80%; /* Adjust the value to change the menu width */
+    width: 40%; /* Adjust the value to change the menu width */
+    height: 100%;
+    background-color: #333;
+    transition: right 0.3s;
+    gap: 50px;
+  }
+  
+  .menu-list li {
+    margin-right: 20px;
+    margin: 0;
+    text-align: center;
+    
+  }
+  
+  .menu-list a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    transition: color 0.3s;
+    
+  }
+  
+  .menu-list a:hover {
+    color: #ffcc00;
+  }
+  
+  .menu-list.show {
+    right: 0;
+  }
+  
   
   .hero-image{
     background-image: url(hero-image.png);
@@ -45,65 +113,7 @@ body {
     
   }
 
-/* hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute;
-    top: 25px;
-    right: 40px;
-    margin-right: 16em;
-  }
-  
-  .bar {
-    width: 40px;
-    height: 6px;
-    background-color: #fff;
-    margin: 4px 0;
-    transition: 0.4s;
-  }
-  
-  .menu-options {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-  }
-  
-  .menu-options li {
-    margin: 10px;
-  }
-  
-  .menu-options a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-  }
-  
-  .hamburger-menu:focus .menu-options {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* Adjust this value based on your design */ 
-   /* background-color: #333;
-    left: 0.00em;
-  }
 
-  .hamburger-menu:focus {
-    outline: none;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  background-color: #444;
-  padding: 10px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}*/
   /* ABOUT US SECTION */
 
   #about-us{
@@ -200,9 +210,13 @@ nav a {
   
  /*  SCREEN SIZE */
 
- @media only screen and (max-width: 767px) {
+ @media only screen and (max-width: 1024px) {
   .hamburger-menu {
       margin:auto
+  }
+
+  .menu-icon {
+    right: 5em;
   }
 
   .hero-image{
@@ -211,7 +225,7 @@ nav a {
     margin-top: 60px;
     background-position:top;
     background-repeat: no-repeat;
-    background-size: 550px;
+    background-size: 700px;
 
   }
 
@@ -237,11 +251,15 @@ nav a {
 
 }
 
+
+
+
+
 /* Styles for phones */
 
 @media only screen and (max-width: 480px) {
   
-  header {
+  navbar {
     background-color: #202020;
     color: white;
     padding: 10px;
@@ -250,6 +268,10 @@ nav a {
     width: 325px;
     margin-left: auto;
     margin-right:auto ;
+  }
+
+  .menu-icon {
+    right: 1px;
   }
   
   .hero-image{
