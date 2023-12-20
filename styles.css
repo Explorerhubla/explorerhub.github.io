@@ -113,6 +113,12 @@ body {
     
   }
 
+  #snake-game{
+    margin-top:0px;
+    margin-left: 223px;
+    
+  }
+
 
   /* ABOUT US SECTION */
 
@@ -276,13 +282,14 @@ body {
   
   .hero-image{
     background-image: url(hero-image.png);
-    margin-top: 60px;
     background-position:top;
     background-repeat: no-repeat;
     background-size: 300px;
     
-
+  
   }
+
+
 
   #about-us{
     width: 300px;
@@ -300,3 +307,5 @@ body {
 
 
 }
+
+
